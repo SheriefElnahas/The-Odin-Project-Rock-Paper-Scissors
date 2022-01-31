@@ -1,3 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
 body {
-    background:teal;
+    overflow: hidden;
+}
+:root {
+    --primary-color: #fac650;
+}
+header {
+    background:rgb(43, 30, 30);
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    height:100px;
+}
+
+header h1 {
+    padding-top:1rem;
+    color:var(--primary-color);
+    font-family: 'Jockey One', sans-serif;
+    letter-spacing: 6px;
+    font-size:3rem;
+}
+
+section {
+    background:rgb(92, 69, 69);
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hind Madurai', sans-serif;
+    color:#fff;
+}
+
+section h2 {
+    margin:3rem -1rem 0 0;
+}
+
+.score-container {
+    display:flex;
+}
+.score-container div {
+    font-weight: bold;
+    margin:3rem 4rem 0 3rem;
+
+}
+.player-choice, .computer-choice {
+    font-size:5rem;
+    text-align: center;
+}
+
+.score {
+    font-size:2rem;
+}
+
+.buttons {
+    margin:3rem 0;
+}
+
+.btn {
+    width:190px;
+    height:150px;
+    font-size:6rem;
+    margin-right:1rem;
+    background:rgb(39, 30, 30);
+    transition: background 0.3s linear;
+    border:none;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background:rgb(77, 60, 60);
+}
+
+@media (max-width: 620px) {
+    header h1 {
+        font-size:2.5rem;
+    }
+    section {
+        min-height: 100vh;
+    }
+    .score {
+        font-size:1.5rem;
+    }
+
+    .btn {
+        width:120px;
+        height:110px;
+        font-size:4rem;
+    }
+
+  
 }
