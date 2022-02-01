@@ -5,9 +5,11 @@
     margin:0;
     box-sizing: border-box;
 }
-
 body {
+    font-family: 'Hind Madurai', sans-serif;
+    min-height: 100vh;
     overflow: hidden;
+
 }
 :root {
     --primary-color: #fac650;
@@ -30,25 +32,28 @@ header h1 {
 
 section {
     background:rgb(92, 69, 69);
-
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Hind Madurai', sans-serif;
     color:#fff;
+    font-weight: bold;
 }
 
-section h2 {
-    margin:3rem -1rem 0 0;
+
+.result {
+    margin-top:2rem;
+    font-size:2.5rem;
+}
+.details {
+    font-size:1.2rem;
 }
 
 .score-container {
     display:flex;
 }
 .score-container div {
-    font-weight: bold;
-    margin:3rem 4rem 0 3rem;
+    margin:2rem 4rem 0 2rem;
 
 }
 .player-choice, .computer-choice {
@@ -62,6 +67,7 @@ section h2 {
 
 .buttons {
     margin:3rem 0;
+  
 }
 
 .btn {
@@ -80,12 +86,61 @@ section h2 {
     background:rgb(77, 60, 60);
 }
 
+.modal {
+    position:absolute;
+    background:rgb(68, 46, 46);
+    width:240px;
+    height:190px;
+    padding:2.8rem;
+    top:35%;
+    left:41%;
+    z-index:100;
+    border-radius:10px;
+    text-align: center;
+
+
+}
+.modal-text {
+    color:rgb(238, 230, 230);
+    font-weight: bold;
+    margin-bottom:1rem;
+    font-size:1.8rem;
+}
+.modal-button   {
+    padding:0.5rem 1rem;
+    color:rgb(238, 230, 230);
+    background:rgb(92, 69, 69);
+    font-family: inherit;
+    font-weight: normal;
+    font-size:1.4rem;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-button:hover {
+    background:rgb(117, 88, 88);
+}
+
+.overlay {
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:10;
+}
+
+.hide {
+    display:none;
+}
 @media (max-width: 620px) {
     header h1 {
         font-size:2.5rem;
     }
     section {
         min-height: 100vh;
+        padding-bottom:2rem;
     }
     .score {
         font-size:1.5rem;
@@ -99,3 +154,4 @@ section h2 {
 
   
 }
+
